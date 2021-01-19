@@ -65,8 +65,8 @@ class RemoteNotification {
       titleLocArgs: _toList(map['titleLocArgs']),
       titleLocKey: map['titleLocKey'],
       body: map['body'],
-      bodyLocArgs: _toList(map['bodyLocArgs']),
-      bodyLocKey: map['bodyLocKey'],
+      bodyLocArgs: _toList(map['bodyLocArgs'] ?? _apple?.subtitleLocArgs),
+      bodyLocKey: map['bodyLocKey'] ?? _apple?.subtitleLocKey,
       android: _android,
       apple: _apple,
     );
